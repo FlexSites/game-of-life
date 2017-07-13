@@ -1,23 +1,31 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import Players from './components/Players'
+import Decisions from './components/Decisions'
+import FamilyGoal from './components/FamilyGoal'
 
 export default class App extends React.Component {
-  render() {
+  render () {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <FamilyGoal />
+        <Decisions />
+        <Players />
       </View>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: '100%',
+    height: '100%',
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
-});
+  header: {
+    height: 300,
+  },
+})
